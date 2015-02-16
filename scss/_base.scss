@@ -205,21 +205,28 @@ footer {
 	@include breakpoint ($large) {
 		.footerGroup2 {
 			width: 19%;
-			float: left;
-			margin-right: 8%;
-			margin-left: 8%;
+			display: inline-block;
+			float: none;
+			margin-right: 7%;
+			margin-left: 7%;
+			vertical-align: top;
 
 		}
 		
 		.footerGroup {
 			width: 19%;
-			float: left;
+			display: inline-block;
 			margin-right: 0;
 		}
 		
-
+		.init {
+			float: none;
+			margin-right: 7%;
+		}
 		.about {
 			margin-right: 0;
+			display: inline-block;
+			margin-left: 0;
 		}
 	}
 }

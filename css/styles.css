@@ -155,15 +155,22 @@ footer {
   @media (min-width: 1000px) {
     footer .footerGroup2 {
       width: 19%;
-      float: left;
-      margin-right: 8%;
-      margin-left: 8%; }
+      display: inline-block;
+      float: none;
+      margin-right: 7%;
+      margin-left: 7%;
+      vertical-align: top; }
     footer .footerGroup {
       width: 19%;
-      float: left;
+      display: inline-block;
       margin-right: 0; }
+    footer .init {
+      float: none;
+      margin-right: 7%; }
     footer .about {
-      margin-right: 0; } }
+      margin-right: 0;
+      display: inline-block;
+      margin-left: 0; } }
 
 @media (min-width: 1000px) {
   .footerWrapper {
@@ -336,7 +343,7 @@ h3 {
   .pic {
     transition: all, 1s, ease; }
 
-  .pic:hover {
+  .homeFeature:hover .pic {
     transform: scale(1.1); } }
 @media (min-width: 1000px) {
   .fka {
@@ -364,24 +371,23 @@ h3 {
   display: block;
   border: 4px solid #ff124f;
   margin-top: 1.5em;
-  overflow: hidden; }
-  .allButton:hover {
-    -webkit-transition: background-color 0.5s ease;
-    -moz-transition: background-color 0.5s ease;
-    -ms-transition: background-color 0.5s ease;
-    -o-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease; }
-    @media (min-width: 660px) {
-      .allButton:hover {
-        border-color: #202230;
-        background-color: #ff124f; }
-        .allButton:hover .allEvents {
-          -webkit-transition: color 0.3s ease;
-          -moz-transition: color 0.3s ease;
-          -ms-transition: color 0.3s ease;
-          -o-transition: color 0.3s ease;
-          transition: color 0.3s ease;
-          color: #202230; } }
+  overflow: hidden;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
+  @media (min-width: 660px) {
+    .allButton:hover {
+      border-color: #202230;
+      background-color: #ff124f; }
+      .allButton:hover .allEvents {
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -ms-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+        color: #202230; } }
   @media (min-width: 1000px) {
     .allButton {
       width: 46%;

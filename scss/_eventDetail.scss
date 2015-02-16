@@ -1,0 +1,162 @@
+.eventHead {
+	position: relative;
+		img {
+			width: 100%;
+		}
+
+}
+
+.dateBg {
+	background-color: rgba(255, 18, 79, .8);
+	color: $blue;
+	width: 60%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+	z-index: 1;
+
+		h3 {
+			color: $blue;
+			font-size: 8em;
+			line-height: .7em;
+			letter-spacing: -2px;
+			margin: 0;
+			position: absolute;
+			right: -10px;
+			bottom: -10px;
+		}
+		span {
+			letter-spacing: 0;
+			font-weight: 600;
+		}
+		p {
+			// background-color: blue;
+			width: 10px;
+			height: 10px;
+			margin: 0;
+			padding: 0;
+			display: block;
+			position: absolute;
+			transform: rotate(-90deg); 
+			right: 180px;
+			bottom: -4px;
+
+			span{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				font-size: 2em;
+				font-weight: 400;
+				display: block;
+				letter-spacing: 1px;
+			}
+		}
+@include breakpoint ($xmed) {
+	width: 50%;
+	}
+}
+
+.dateWrap {
+	// background-color: green;
+	width: 60%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.detailDescr {
+	color: $gray;
+
+	h3{
+		margin-bottom: 0;
+		font-weight: 500;
+		font-size: 2em;
+	}
+	p {
+		margin: .5em 0;
+		line-height: 1.5;
+	}
+
+	h4 {
+		font-weight: 200;
+		margin: 0;
+	}
+
+	.sponsor {
+		color: #9a9999;
+		font-size: .85em;
+		margin: 1em 0 3em 0;
+
+
+	}
+	.detailBody {
+		margin-top: 3em;
+		font-size: .9em;
+		letter-spacing: 1px;
+	}
+
+	a {
+		display: block;
+		background-color: $pink;
+		padding: .5em 40px .6em 0;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-align: right;
+		margin: 1.5em 0 5em 0;
+
+		@include breakpoint($med) {
+			width: 38%;
+			padding-right: 0;
+			padding-left: 2%;
+			text-align: left;
+		}
+
+		.point {
+			font-size: 1.4em;
+		}
+
+		&:hover {
+			@include transition (background-color, .5s, ease);
+
+			@include breakpoint($med) {
+	
+					background-color: $gray;
+					
+				}
+		}
+
+			
+	}
+	
+	
+
+	
+
+	@include breakpoint($xmed) {
+		width: 100%;
+		float: right;
+	}
+}
+
+.detail {
+
+	@include breakpoint($med) {
+		width: 60%;
+		float: right;
+		padding-top: 1.5em;
+	}
+	@include breakpoint($xmed) {
+		width: 60%;
+	}
+}
+//.fixthis {
+//
+//	@include breakpoint($med) {
+//		margin-top: -19em;
+//	}
+
+//}

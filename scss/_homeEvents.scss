@@ -1,3 +1,5 @@
+// ========================================== SIDEBAR
+
 h3 {
 	color: $gray;
 	font-size: 1.5em;
@@ -27,16 +29,16 @@ h3 {
 	&:after {
 		content: "\00BB";
 		position: absolute;
-		top: 4px; 
-		right: 40px;
+		top: 6px; 
+		right: 14px;
 		font-size: 1.55em;
 		font-weight: 200;
 	}
 	
 
-	&:hover {
+	@include transition (color, .4s, ease);
 
-		@include transition (color, .3s, ease);
+	&:hover {
 
 		@include breakpoint($med) {
 			color: $pink;
@@ -47,6 +49,9 @@ h3 {
 
 
 
+
+// ========================================== INDV FEATURED EVENTS
+
 .homeFeature {
 	display: block;
 	background-color: $gray;
@@ -54,50 +59,53 @@ h3 {
 	margin-top: 1.5em;
 	overflow: hidden;
 
-	&:hover {
-		.more {
-			@include transition (color, .5s, ease);
-			@include breakpoint($med) {
-				color: $blue;
-			}
-		}
+
+
+	h4, p {
+		text-align: right;			
 	}
 
-		img {
-			width: 100%;
-			
-		}
+	h4 {
+		font-size: 1.5em;
+		margin: .5em;
+		margin-bottom: .5em;
+	}
 
+	p {
+		font-size: 1.1em;
+		margin: .5em;			
+	}
 		
-		p {
-			font-size: 1.25em;
-			margin: .5em;
-			
-		}
-		h4, p {
-			text-align: right;
-			
-		}
-		
-		h4 {
-			font-size: 1.5em;
-			margin: .5em;
-			margin-bottom: .5em;
-		}
+	
+	.more {
+		color: $pink;
+		font-weight: 300;
+		margin-top: -.55em;
+		@include transition (color, .4s, ease);
 
+		&:hover {
+				@include breakpoint($med) {
+					color: $blue;
+				}
+			}
+	}
 
 	@include breakpoint ($med) {
-			width: 100%;
-			
-		}
+		width: 100%;		
+	}
 
 	@include breakpoint ($large) {
-			width: 47%;
-			float: left;
-			margin-top: 1em;
-			margin-left: 1.1em;
-			}
+		width: 47%;
+		float: left;
+		margin-top: 1em;
+		margin-left: 1.1em;
+	}
 
+}
+
+.pic {
+	height: 12em;
+	overflow: hidden;
 }
 
 @include breakpoint($med) {
@@ -118,9 +126,10 @@ h3 {
 	}
 }
 
+
+// ========================================== FEATURED EVENTS WRAP
 .home .features {
 	margin-top: 0;
-	
 }
 
 .home .top {
@@ -137,10 +146,6 @@ h3 {
 
 	}
 }
-.more {
-	color: $pink;
-	font-weight: 400;
-}
 
 .allButton {
 	display: block;
@@ -153,27 +158,27 @@ h3 {
 		
 		
 		@include breakpoint($med) {
-
-			.allEvents {
-				@include transition (color, .3s, ease);
-				color: $blue;
-			}
 			border-color:$blue;
 			background-color: $pink;
+
+			.allEvents {
+				@include transition (color, .5s, ease);
+				color: $blue;
+			}
 		
 		}
 	}
+}
 
 .allEvents {
 
-}
 
 	@include breakpoint ($large) {
-			width: 46%;
-			float: left;
-			margin-top: 1em;
-			margin-left: 1.1em;
-			}
+		width: 46%;
+		float: left;
+		margin-top: 1em;
+		margin-left: 1.1em;
+	}
 
 }
 
@@ -182,7 +187,7 @@ h3 {
 	font-size: 6em;
 	line-height:.6;
 	margin: 0;
-	margin-top: 2.16em;
+	margin-top: 1.98em;
 	margin-left: -12px;
 
 	
@@ -204,7 +209,7 @@ h3 {
 		float: left;
 	}
 
-	@include breakpoint ($med) {
+	@include breakpoint ($xmed) {
 		width: 34%;
 	}
 }

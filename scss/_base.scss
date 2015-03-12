@@ -10,7 +10,10 @@
 
 
 
-img{
+
+// =================================================== BASE STYLES 
+
+img {
 	max-width: 100%;
 	padding: 0;
 	margin: 0;
@@ -36,43 +39,6 @@ ul {
 
 }
 
-
-
-.navUl {
-	text-align: right;
-	// margin-right: 3%;
-	line-height: 1.45;
-	display: inline-block;
-	float: right;
-	font-size: .9em;
-	font-weight: 400;
-	padding-right: .5em;
-	border-right: 2px solid $pink;
-
-
-}
-
-.navLink {
-		&:hover {
-			@include transition (color, .5s, ease);
-			@include breakpoint($med) {
-				color: $pink;
-			}
-		}
-}
-
-.navBorder {
- 	
- 	display: block;
-    height: 1px;
-    border: 0;
-    border-top: 2px solid $pink;
-    margin: 0 0 3em 0;
-    padding: 0;
- }
-
-
-
 a {
 	text-decoration: none;
 	color: $blue;
@@ -92,13 +58,27 @@ a {
 }
 
 
+h2, h3 {
+	font-weight: 200;
+}
+
+
+header {
+	background-color: #fff;
+	margin-bottom: 2em;
+}
+
+
+// ================================================== NAVIGATION
+
 .logo {
   background: url(../images/logo.png) no-repeat;
   text-indent: -9999px;
-  width: 177px;
-  height: 110px;
+  width: 190px;
+  height: 120px;
+  background-size: 190px 120px;
   float: left;
-  margin-top: .3em;
+  margin-top: .2em;
 }
 
 
@@ -106,17 +86,48 @@ h1 {
 	margin: 0;
 }
 
-h2, h3 {
-	font-weight: 200;
+
+.navUl {
+	text-align: right;
+	// margin-right: 3%;
+	line-height: 1.45;
+	display: inline-block;
+	float: right;
+	font-size: .9em;
+	font-weight: 400;
+	padding-right: .5em;
+	border-right: 2px solid $pink;
 }
 
 
+.navLink {
+	@include transition (color, .5s, ease);
 
-header {
-	background-color: #fff;
-	padding: .5em 0;
-	margin-bottom: .75em;
+	&:hover {
+		@include breakpoint($med) {
+			color: $pink;
+		}
+	}
+
 }
+
+.navBorder {	
+ 	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid $pink;
+    margin: 0 0 3em 0;
+    padding: 0;
+ }
+
+
+
+
+
+
+
+
+// ==================================================== FOOTER
 
 footer {
 	margin-top: 7em;
@@ -132,9 +143,9 @@ footer {
 		line-height: 1.4;
 		letter-spacing: 1px;
 
-		&:hover {
+		@include transition (color, .4s, ease);
 
-			@include transition (color, .5s, ease);
+		&:hover {
 
 			@include breakpoint($med) {
 			color: $pink;

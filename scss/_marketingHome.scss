@@ -1,13 +1,15 @@
 .marketingArea {
 	position: relative;
-	overflow: hidden;
-	
-	
+	overflow: hidden;	
 }
 
 
+
+
+
+// ================================================ PINK MARKETING WRAP 
 .marketText { 
-	background-color: rgba(255, 18, 79, .8);
+	background-color: rgba(255, 19, 102, .8);
 	padding-bottom: 8px;
 	padding-right: 8px;
 	overflow: hidden;
@@ -18,101 +20,111 @@
 	right: 0;
 	z-index: 1;
 
-		h2 {
-			font-size: 2em;
-			display: inline-block;
-			margin: 0;
-			margin-left: -3px;
-			margin-bottom: 2em;
-			line-height: .9em;
-
-			@include breakpoint ($med) {
-			font-size: 3em;
-			}
-
-			@include breakpoint ($xmed) {
-			font-size: 3.7em;
-			}
-
-			@include breakpoint ($large) {
-			font-size: 4.3em;
-			}
-		}
-
-		p {
-			text-align: right;
-			position: absolute;
-			bottom: 0;
-			right: 1em;
-			font-size: .9em;
-
-			@include breakpoint($xmed) {
-				font-size: 1em;
-			}
-			@include breakpoint ($large) {
-				font-size: 1.1em;
-		}
-		}
-
-		@include breakpoint ($small) {
-			width: 50%;
-		}
+	@include breakpoint ($small) {
+		width: 50%;
+	}
 		
+	@include breakpoint ($med) {
+		width: 34%;
+	}
+
+	@include breakpoint ($large) {
+		width: 33%;
+	}
+
+
+
+	h2 {
+		font-size: 2em;
+		display: inline-block;
+		margin: 0;
+		margin-left: -3px;
+		margin-bottom: 2em;
+		line-height: .9em;
+
 		@include breakpoint ($med) {
-			width: 34%;
+			font-size: 3em;
+		}
+
+		@include breakpoint ($xmed) {
+			font-size: 3.7em;
 		}
 
 		@include breakpoint ($large) {
-			width: 33%;
+			font-size: 4.3em;
 		}
+	}
+
+
+
+	p {
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 1em;
+		font-size: 1em;
+
+		@include breakpoint($xmed) {
+			font-size: 1.2em;
+		}
+		@include breakpoint ($large) {
+			font-size: 1.45em;
+		}
+	}
+
+
+
 }
 
+
+
+// ================================ MARKETING WRAP W/ BROWSE BUTTON
 .marketingParent {
 	position: relative;
 }
 
+
+
+// ================================================ BROWSE ALL EVENTS 
 .button {
 
-		display: block;
-		border: 2px solid $pink;
-		padding: .5em 40px .6em 0;
-		font-weight: 300;
-		letter-spacing: 1px;
-		text-align: right;
-		margin: .5em 0 0 0;
-		color: $gray;
+	display: block;
+	border: 2px solid $pink;
+	padding: .5em 40px .6em 0;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-align: right;
+	margin: .5em 0 0 0;
+	color: $gray;
+
+	// ================= ARROWS
+	.point {
+		font-size: 1.4em;
+	}
 
 
-		.point {
-			font-size: 1.4em;
-		}
-
-
-		@include breakpoint($med) {
+	@include breakpoint($med) {
 		
-			padding-right: 0;
-			padding-left: 2%;
+		padding-right: 0;
+		padding-left: 2%;
+		position: absolute;
+		right: 18px;
+		bottom: 18px;
+		padding-right:10px;
+		margin: 0;
+		border: 2px solid transparent;
+		background-color: $pink;
+		color: $blue;
+		width: 28%;
 			
-	
-			position: absolute;
-			right: 18px;
-			bottom: 18px;
-			padding-right:10px;
-			margin: 0;
-			border: 2px solid transparent;
-			background-color: rgba(255, 18, 79, .8);
-			color: $blue;
-			width: 28%;
-			
-		}
-		@include transition (color, .5s, ease);
+	}
+		
+	@include transition (color, .4s, ease);
 
-		&:hover {
-			
-
-			@include breakpoint($med) {
-					color: $gray;	
-			}
+	&:hover {
+		@include breakpoint($med) {
+			color: $gray;	
 		}
+	}
 
 }

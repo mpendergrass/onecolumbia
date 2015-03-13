@@ -89,14 +89,24 @@ h1 {
 
 .navUl {
 	text-align: right;
-	// margin-right: 3%;
 	line-height: 1.45;
 	display: inline-block;
 	float: right;
-	font-size: .9em;
+	font-size: .93em;
 	font-weight: 400;
 	padding-right: .5em;
 	border-right: 2px solid $pink;
+	
+	
+
+	@include breakpoint($med){
+		margin-top:60px;
+
+		li {
+			display: inline-block;
+			margin-left: 30px;
+		}
+	}
 }
 
 

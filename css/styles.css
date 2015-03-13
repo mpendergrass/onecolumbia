@@ -66,10 +66,16 @@ h1 {
   line-height: 1.45;
   display: inline-block;
   float: right;
-  font-size: .9em;
+  font-size: .93em;
   font-weight: 400;
   padding-right: .5em;
   border-right: 2px solid #ff1366; }
+  @media (min-width: 660px) {
+    .navUl {
+      margin-top: 60px; }
+      .navUl li {
+        display: inline-block;
+        margin-left: 30px; } }
 
 .navLink {
   -webkit-transition: color 0.5s ease;
@@ -343,10 +349,10 @@ h3 {
   overflow: hidden; }
 
 @media (min-width: 660px) {
-  .pic {
+  .pic img {
     transition: all, 1s, ease; }
 
-  .homeFeature:hover .pic {
+  .homeFeature:hover .pic img {
     transform: scale(1.1); } }
 @media (min-width: 1000px) {
   .fka {
@@ -389,9 +395,10 @@ h3 {
         color: #202230; } }
 
 @media (min-width: 1000px) {
-  .allEvents {
+  .allButton {
     width: 46%;
     float: left;
+    height: 294px;
     margin-top: 1em;
     margin-left: 1.1em; } }
 
@@ -404,6 +411,9 @@ h3 {
   margin-left: -12px; }
   .allEvents .bold {
     font-weight: 600; }
+  @media (min-width: 1000px) {
+    .allEvents {
+      margin-top: 1.8em; } }
 
 .pink {
   color: #ff1366; }
@@ -448,9 +458,13 @@ h3 {
   width: 90%; }
   .eventBrief h5 {
     color: #dbdbdb;
-    font-weight: 300;
-    font-size: 1em;
-    margin-top: 0; }
+    font-weight: 100;
+    font-size: .85em;
+    margin-top: 0;
+    text-transform: lowercase;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 5em; }
   .eventBrief h4 {
     color: #dbdbdb;
     font-weight: 300;
@@ -463,7 +477,8 @@ h3 {
   .eventBrief a {
     color: #ff1366; }
   .eventBrief .more {
-    text-align: right; }
+    text-align: right;
+    color: #ff1366; }
   .eventBrief .eventDescr {
     color: #dbdbdb;
     line-height: 1.5; }

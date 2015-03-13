@@ -109,12 +109,12 @@ h3 {
 }
 
 @include breakpoint($med) {
-	.pic {
+	.pic img {
 		transition: all, 1s, ease;
 	}
 
 	.homeFeature:hover {
-		.pic {
+		.pic img {
 			transform: scale(1.1);
 		}
 	}
@@ -152,6 +152,7 @@ h3 {
 	border: 4px solid $pink;
 	margin-top: 1.5em;
 	overflow: hidden;
+	
 	@include transition (background-color, .5s, ease);
 
 	&:hover {
@@ -170,12 +171,11 @@ h3 {
 	}
 }
 
-.allEvents {
-
-
+.allButton {
 	@include breakpoint ($large) {
 		width: 46%;
 		float: left;
+		height: 294px;
 		margin-top: 1em;
 		margin-left: 1.1em;
 	}
@@ -193,6 +193,10 @@ h3 {
 	
 	.bold {
 		font-weight: 600;
+	}
+
+	@include breakpoint($large){
+		margin-top: 1.8em;
 	}
 }
 

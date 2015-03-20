@@ -136,20 +136,18 @@
 
 .calendar {
 
-	span {
+	.bold {
 		@include transition (color, .4s, ease);
-	}
 
-	&:hover {
-		@include breakpoint($med) {
-			span {
+		&:hover {
+			@include breakpoint($med) {
 				color: $gray;
 
-			}       //= END SPAN
+			}       //===== END INCLUDE
 
-		}       //===== END INCLUDE
-
-	}       //========= END HOVER
+		} 		//========= END HOVER
+		
+	}      //========= END BOLD
 
 }       //============= END .CALENDAR
 

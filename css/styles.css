@@ -504,15 +504,15 @@ h3 {
   border-style: solid;
   border-image: linear-gradient(135deg, #ff1366, #202230) 3; }
 
-.calendar span {
+.calendar .bold {
   -webkit-transition: color 0.4s ease;
   -moz-transition: color 0.4s ease;
   -ms-transition: color 0.4s ease;
   -o-transition: color 0.4s ease;
   transition: color 0.4s ease; }
-@media (min-width: 660px) {
-  .calendar:hover span {
-    color: #dbdbdb; } }
+  @media (min-width: 660px) {
+    .calendar .bold:hover {
+      color: #dbdbdb; } }
 
 .eventHead {
   position: relative; }
@@ -621,7 +621,7 @@ h3 {
 
 @media (min-width: 660px) {
   .detail {
-    width: 60%;
+    width: 57%;
     float: right;
     padding-top: 1.5em; } }
 @media (min-width: 800px) {
